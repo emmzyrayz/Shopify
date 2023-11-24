@@ -26,6 +26,42 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+function animateCircle() {
+  // Assuming you have logic for handling the circle animation
+  // You can add code here if needed
+  const setIcon = document.querySelector(".set-icon.completed");
+
+  if (setIcon) {
+    setIcon.classList.add("pulse-animation");
+    setTimeout(() => {
+      setIcon.classList.remove("pulse-animation");
+    }, 1000); // Adjust the duration of the animation in milliseconds
+  }
+}
+
+function updateStep(stepNumber) {
+  const stepCounter = document.getElementById("step-counter");
+  const progressFilled = document.getElementById("progress-filled");
+
+  const widthPerStep = 100 / 5;
+  // Assuming 5 steps, adjust as needed
+  const filledWidth = widthPerStep * stepNumber;
+
+  stepCounter.innerText = `${stepNumber}/5 completed`;
+  progressFilled.style.width = `${filledWidth}%`;
+
+  // Change set-icon background dynamically
+  const allSetIcons = document.querySelectorAll(".set-icon");
+  allSetIcons.forEach((setIcon, index) => {
+    if (index < stepNumber - 1) {
+      setIcon.style.backgroundImage =
+        "url(https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg)";
+    } else {
+      setIcon.style.backgroundImage =
+        "url(https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg)";
+    }
+  });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const setupSteps = document.querySelectorAll(".setup-step");
@@ -37,101 +73,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const setBtn = step.querySelector(".set-btn");
 
     setIcon.addEventListener("click", () => {
-      toggleStepCompletion(step, index);
-      updateStep(getCompletedStepsCount());
+      // Reset all steps to initial state
+      setupSteps.forEach((s) => {
+        s.querySelector(".set-icon").classList.remove("completed");
+        s.querySelector(".set-text").classList.remove("active");
+        s.querySelector(".set-image").classList.remove("active");
+        s.querySelector(".set-btn").classList.remove("active");
+      });
+
+      // Mark current step as completed
+      setIcon.classList.add("completed");
+      setText.classList.add("active");
+      setImage.classList.add("active");
+      setBtn.classList.add("active");
+
+      // Update step counter
+      updateStep(index + 1);
     });
   });
 });
-
-function toggleStepCompletion(step, index) {
-  const setIcon = step.querySelector(".set-icon");
-  const setText = step.querySelector(".set-text");
-  const setImage = step.querySelector(".set-image");
-  const setBtn = step.querySelector(".set-btn");
-
-  // Check if the step is already completed
-  const isCompleted = setIcon.classList.contains("completed");
-
-  // Collapse the current step and expand the next one
-  collapseStep(index);
-
-  if (!isCompleted) {
-    // Mark the step as completed
-    setIcon.classList.add("completed");
-    setText.classList.add("active");
-    setImage.classList.add("active");
-    setBtn.classList.add("active");
-
-    // Change background image for completed state
-    setIcon.style.backgroundImage =
-      "url(https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg)";
-
-    // Expand the next incomplete step
-    expandNextIncompleteStep(index + 1);
-  } else {
-    // Mark the step as incomplete
-    setIcon.classList.remove("completed");
-    setText.classList.remove("active");
-    setImage.classList.remove("active");
-    setBtn.classList.remove("active");
-
-    // Change background image for incomplete state
-    setIcon.style.backgroundImage =
-      "url(https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg)";
-  }
-}
-
-function collapseStep(index) {
-  const currentStep = document.querySelector(`.setup-step:nth-child(${index})`);
-  if (currentStep) {
-    const setIcon = currentStep.querySelector(".set-icon");
-    const setText = currentStep.querySelector(".set-text");
-    const setImage = currentStep.querySelector(".set-image");
-    const setBtn = currentStep.querySelector(".set-btn");
-
-    // Collapse the current step
-    setIcon.classList.remove("completed");
-    setText.classList.remove("active");
-    setImage.classList.remove("active");
-    setBtn.classList.remove("active");
-  }
-}
-
-function expandNextIncompleteStep(index) {
-  const nextStep = document.querySelector(
-    `.setup-step:nth-child(n + ${index}):not(.completed)`
-  );
-
-  if (nextStep) {
-    const setIcon = nextStep.querySelector(".set-icon");
-    const setText = nextStep.querySelector(".set-text");
-    const setImage = nextStep.querySelector(".set-image");
-    const setBtn = nextStep.querySelector(".set-btn");
-
-    // Mark the next incomplete step as active
-    setIcon.classList.add("completed");
-    setText.classList.add("active");
-    setImage.classList.add("active");
-    setBtn.classList.add("active");
-  }
-}
-
-function getCompletedStepsCount() {
-  const completedSteps = document.querySelectorAll(".set-icon.completed");
-  return completedSteps.length;
-}
-
-function updateStep(completedStepsCount) {
-  const stepCounter = document.getElementById("step-counter");
-  const progressFilled = document.getElementById("progress-filled");
-  const totalSteps = 5; // Assuming 5 steps, adjust as needed
-
-  const widthPerStep = 100 / totalSteps;
-  const filledWidth = widthPerStep * completedStepsCount;
-
-  stepCounter.innerText = `${completedStepsCount}/${totalSteps} completed`;
-  progressFilled.style.width = `${filledWidth}%`;
-}
 
 // nav btn
 // Toggle "active" class for the notification menu

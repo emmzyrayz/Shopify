@@ -58,7 +58,7 @@ nav.navbar {
   justify-content: space-between;
   align-items: center;
   color: var(--font-light);
-  padding: 5px;
+  padding: 5px 0px;
 }
 
 .navbar .nav-logo img {
@@ -82,7 +82,7 @@ nav.navbar {
   align-items: center;
   position: relative;
   margin: 0;
-  width: 50%;
+  width: 70%;
 }
 
 .nav-search input {
@@ -115,6 +115,7 @@ nav.navbar {
   background: var(--light-black);
   border-radius: 5px;
   scale: 1.15;
+  margin-right: auto;
 }
 
 .nav-profile {
@@ -513,6 +514,7 @@ hr {
     height: 30px;
     width: 30px;
     right: 5px;
+    position: absolute;
     /* padding: 10px; */
     font-weight: 500;
     font-size: 16px;
@@ -532,6 +534,16 @@ hr {
   .acc-user .nav-profile .profile-name {
     display: block;
   }
+  
+  .nav-account .nav-notification{
+    position: absolute;
+    margin-right: 30px;
+  }
+  
+  .nav-search input{
+    height: 30px;
+  }
+
 
   .acc-menu,
   .not-menu {
