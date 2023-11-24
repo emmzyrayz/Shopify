@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shopify</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="navbar">
+        <div class="nav-logo">
+          <a href="www.shopify.com">
+            <img
+              class="logo-name"
+              src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
+              alt="logo"
+            />
+            <img
+              class="logo-bag"
+              src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
+              alt="logo"
+            />
+          </a>
+        </div>
+
+        <div class="nav-search">
+          <input type="search" name="" placeholder="search" id="search-input" />
+          <img
+            class="search-icon white-icon"
+            src="https://crushingit.tech/hackathon-assets/icon-search.svg"
+            alt="Search Icon"
+          />
+        </div>
+
+        <div class="nav-account">
+          <div onclick="toggleNotificationMenu()" class="nav-notification">
+            <img
+              class="notification-bell white-icon"
+              src="https://crushingit.tech/hackathon-assets/icon-bell.svg"
+              alt="notification bell"
+            />
+          </div>
+
+          <div class="nav-profile">
+            <div onclick="toggleAccountMenu()" class="profile-name">
+              Nnamdi Dike
+            </div>
+            <div onclick="toggleAccountMenu()" class="profile-abv">ND</div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="menus" id="menus">
+      <div class="acc-menu" id="acc-menu">
+        <div class="acc-user">
+          <div class="nav-profile">
+            <div class="profile-abv">ND</div>
+            <div class="profile-name">Nnamdi Dike</div>
+          </div>
+          <img
+            src="https://img.icons8.com/ios-filled/50/checkmark--v1.png"
+            alt="check mark"
+          />
+        </div>
+        <div class="acc-store">
+          <img
+            src="https://crushingit.tech/hackathon-assets/icon-store.svg"
+            alt="store"
+          />
+          <span>All store</span>
+        </div>
+        <hr />
+        <div class="acc-btn">Help Center</div>
+        <div class="acc-btn">Changelog</div>
+        <div class="acc-btn">Community forums</div>
+        <div class="acc-btn">Hire a Shopify Partner</div>
+        <div class="acc-btn">Keyboard shortcuts</div>
+        <hr />
+        <div class="acc-btn">
+          <div class="acc-btn-name">Nnamdi Dike</div>
+          <div class="acc-btn-email">emmanueldike275@gmail.com</div>
+        </div>
+        <div class="acc-btn">Manage account</div>
+        <div class="acc-btn">Log out</div>
+      </div>
+
+      <div class="not-menu" id="not-menu">
+        <div class="top-not-menu" id="top-not-menu">
+          <span>Alerts</span>
+          <div class="top-not-menu-img">
+            <img
+              class="grey-icon"
+              src="https://crushingit.tech/hackathon-assets/icon-filter.svg"
+              alt=""
+            />
+            <img
+              class="grey-icon"
+              src="https://crushingit.tech/hackathon-assets/icon-check-empty-circle.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="down-not-menu" id="down-not-menu">
+          Alerts about your store and account will be shown here
+        </div>
+      </div>
+    </section>
+
+    <section class="top">
+      <div class="top-section" id="top-section">
+        <div class="top-text">
+          Extend your trial for $1/month for 3 months on select plans.
+        </div>
+        <div class="top-btn">
+          <a href="https://www.shopify.com/pricing"><button class="btn">Select a plan</button></a>
+          <img
+          onclick="closeBtn()"
+            class="white-icon"
+            src="https://crushingit.tech/hackathon-assets/icon-cross.svg"
+            alt="cancel"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="main">
+      <h3 class="main-head">Setup guide</h3>
+      <span class="main-text">
+        Use this personalized guide to get your store up and running.
+      </span>
+      <div class="main-counter">
+        <p id="step-counter">1/5 completed</p>
+
+        <div class="progress-bar">
+          <div class="progress-filled" id="progress-filled"></div>
+        </div>
+      </div>
+      <div onclick="arrowBtn()" class="cancel-btn" id="cancel-btn">
+        <img
+          class="down-arrow black-icon"
+          src="https://crushingit.tech/hackathon-assets/icon-arrow-down.svg"
+          alt="down arrow"
+        />
+        <img
+          class="up-arrow black-icon"
+          src="https://crushingit.tech/hackathon-assets/icon-arrow-up.svg"
+          alt="up arrow"
+        />
+      </div>
+
+      <div class="setup-process" id="setup-process">
+        <div class="setup-step" id="setup-step">
+          <div
+            onclick="animateCircle()"
+            class="set-icon grey-icon"
+            id="set-icon"
+          >
+            <!-- <img
+              class="dotted-circle grey-icon"
+              id="dotted-circle"
+              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+              alt="dot circle"
+            /> -->
+          </div>
+          <div class="set-text active">
+            <h3>Customer your online store</h3>
+            <p>
+              Choose a theme and add your logo, colors, and images to reflect
+              your brand. <span class="hyper">Learn more</span>
+            </p>
+            <div class="set-btn">Customize theme</div>
+          </div>
+          <div class="set-image active">
+            <img
+              src="https://crushingit.tech/hackathon-assets/customise-store.png"
+              alt="Customize store"
+            />
+          </div>
+        </div>
+
+        <div class="setup-step" id="setup-step">
+          <div
+            onclick="animateCircle()"
+            class="set-icon grey-icon"
+            id="set-icon"
+          >
+            <!-- <img
+              class="dotted-circle grey-icon"
+              id="dotted-circle"
+              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+              alt="dot circle"
+            /> -->
+          </div>
+          <div class="set-text">
+            <h3>Add your first product</h3>
+            <p>
+              Write a description, add photos, and set pricing for the products
+              you plan to sell. <span class="hyper">Learn more</span>
+            </p>
+            <div class="set-btns">
+              <div class="set-btn">Add product</div>
+              <div class="set-btn-2">Import product</div>
+            </div>
+          </div>
+          <div class="set-image">
+            <img
+              src="https://crushingit.tech/hackathon-assets/product.png"
+              alt="product"
+            />
+          </div>
+        </div>
+
+        <div class="setup-step" id="setup-step">
+          <div
+            onclick="animateCircle()"
+            class="set-icon grey-icon"
+            id="set-icon"
+          >
+            <!-- <img
+              class="dotted-circle grey-icon"
+              id="dotted-circle"
+              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+              alt="dot circle"
+            /> -->
+          </div>
+          <div class="set-text">
+            <h3>Add a custom domain</h3>
+            <p>
+              Your current domain is 222219.myshopify.com but you can add a
+              custom domain to help customers find your online store.
+              <span class="hyper">Learn more</span>
+            </p>
+            <div class="set-btn">Add domain</div>
+          </div>
+          <div class="set-image">
+            <img
+              src="https://crushingit.tech/hackathon-assets/website.png"
+              alt="website"
+            />
+          </div>
+        </div>
+
+        <div class="setup-step" id="setup-step">
+          <div
+            onclick="animateCircle()"
+            class="set-icon grey-icon"
+            id="set-icon"
+          >
+            <!-- <img
+              class="dotted-circle grey-icon"
+              id="dotted-circle"
+              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+              alt="dot circle"
+            /> -->
+          </div>
+          <div class="set-text">
+            <h3>Name your store</h3>
+            <p>
+              Your temporary store name is currently Davi collections. The store
+              name appears in your admin and online store.
+              <span class="hyper">Learn more</span>
+            </p>
+            <div class="set-btn">Name store</div>
+          </div>
+          <div class="set-image">
+            <img
+              src="https://crushingit.tech/hackathon-assets/name-store.png"
+              alt="Customize store"
+            />
+          </div>
+        </div>
+
+        <div class="setup-step" id="setup-step">
+          <div
+            onclick="animateCircle()"
+            class="set-icon grey-icon"
+            id="set-icon"
+          >
+            <!-- <img
+              class="dotted-circle grey-icon"
+              id="dotted-circle"
+              src="https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg"
+              alt="dot circle"
+            /> -->
+          </div>
+          <div class="set-text">
+            <h3>Setup payment provider</h3>
+            <p>
+              Choose a payment provider to start accepting payments. You'll need
+              to create an account with the payment provider and set it up with
+              your Shopify store.
+              <span class="hyper">Learn more</span>
+            </p>
+            <div class="set-btn">Set up payment</div>
+          </div>
+          <div class="set-image">
+            <img
+              src="https://crushingit.tech/hackathon-assets/payment.png"
+              alt="payment"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>

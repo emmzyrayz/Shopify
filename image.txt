@@ -1,0 +1,40 @@
+visa--------- https://crushingit.tech/hackathon-assets/payment.png
+
+clothes---------------- https://crushingit.tech/hackathon-assets/product.png
+
+www.------------ https://crushingit.tech/hackathon-assets/website.png
+
+paintBrush--------- https://crushingit.tech/hackathon-assets/customise-store.png
+
+boyShirt--------------- https://crushingit.tech/hackathon-assets/name-store.png
+
+
+__________ICONS_________
+
+bell----------- https://crushingit.tech/hackathon-assets/icon-bell.svg
+
+search-------------- https://crushingit.tech/hackathon-assets/icon-search.svg
+
+downarrow----------- https://crushingit.tech/hackathon-assets/icon-arrow-down.svg
+
+uparrow------------ https://crushingit.tech/hackathon-assets/icon-arrow-up.svg
+
+cancel-------------- https://crushingit.tech/hackathon-assets/icon-cross.svg
+
+store---------------- https://crushingit.tech/hackathon-assets/icon-store.svg
+
+shopify--------------- https://crushingit.tech/hackathon-assets/shopify-icon.svg
+
+shopify-logo------------ https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg
+
+loading--------------- https://crushingit.tech/hackathon-assets/icon-spinner.svg
+
+dot-loading--------------- https://crushingit.tech/hackathon-assets/icon-dashed-circle.svg
+
+done--------------- https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg
+
+circle-tick---------------- https://crushingit.tech/hackathon-assets/icon-check-empty-circle.svg
+
+menu---------------- https://crushingit.tech/hackathon-assets/icon-filter.svg
+
+tick------------------ https://img.icons8.com/ios-filled/50/checkmark--v1.png
